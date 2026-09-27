@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Students - Student Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">🎓 Student Management System</div>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="students.html" class="active">Students</a></li>
+      <li><a href="add-student.html">Add Student</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h1 class="page-title">Student List</h1>
+
+    <div class="toolbar">
+      <input type="text" id="searchInput" placeholder="Search by name, ID or course...">
+
+      <div class="filters">
+        <select id="courseFilter">
+          <option value="all">All Courses</option>
+          <option value="CSE">CSE</option>
+          <option value="ECE">ECE</option>
+          <option value="IT">IT</option>
+          <option value="ME">ME</option>
+        </select>
+
+        <select id="yearFilter">
+          <option value="all">All Years</option>
+          <option value="1st Year">1st Year</option>
+          <option value="2nd Year">2nd Year</option>
+          <option value="3rd Year">3rd Year</option>
+          <option value="4th Year">4th Year</option>
+        </select>
+
+        <select id="genderFilter">
+          <option value="all">All Genders</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Course</th>
+            <th>Year</th>
+            <th>Attendance</th>
+            <th>Marks</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="studentTableBody">
+          <!-- Rows are added here by JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/students.js"></script>
+</body>
+</html>
